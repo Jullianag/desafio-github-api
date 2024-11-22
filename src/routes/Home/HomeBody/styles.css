@@ -1,0 +1,14 @@
+.text-dev {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-font-quaternary);
+}
+
+.text-des {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.mt27 {
+    margin-top: 27px;
+}

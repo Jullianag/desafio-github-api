@@ -1,0 +1,72 @@
+.info-card {
+    width: 1251px;
+    height: 334px;
+    border-radius: 8px;
+    background-color: var(--color-card-info);
+    margin-left: -30px;
+    margin-top: 104px;
+}
+
+img {
+    width: 247px;
+}
+
+.info-container {
+    display: flex;
+}
+
+.mt43 {
+    margin-top: 43px;
+}
+
+.div-info {
+    display: flex;
+
+}
+
+.div-img {
+    margin-left: 38px;
+}
+
+.card-letras {
+    margin-left: 29px;
+    width: 902px;
+    height: 247px;
+    background-color: var(--color-card-card);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+}
+
+.caixa {
+    width: 872px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 15px;
+    color: var(--color-font);
+    font-size: 16px;
+}
+
+.card-letras h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-bg-primary);
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.card-letras {
+    color: var(--color-bg-primary);
+}
+
+.caixa label {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-font);
+    margin-right: 5px;
+}
+
