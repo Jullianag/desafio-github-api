@@ -12,6 +12,7 @@ type formData = {
 
 export default function SearchBar() {
 
+    const [erro, setErro] = useState<string | undefined>();
 
     const [address, setAddress] = useState<PerfilDTO>();
 
@@ -21,11 +22,12 @@ export default function SearchBar() {
         }
     );
 
-    function handleInputChange(event: any) {
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         const name = event.target.name;
         const value = event.target.value;
         setFormData({...formData, [name]: value});
     }
+
 
     function handleFormSubmit(event: any) {
         event.preventDefault();
@@ -33,12 +35,16 @@ export default function SearchBar() {
         findByName(formData.Github)
             .then((response) => {
                 setAddress(response.data);
+                setErro(undefined);
             })
             .catch((error) => {
                 setAddress(undefined);
-                console.log(error);
+                setErro("Erro ao buscar usuário");
+                console.log(error.response.data);
             });
+
     }
+
 
 
     return (
@@ -59,11 +65,12 @@ export default function SearchBar() {
 
                 <div className="error">
                     {
-                    address ? <InforCard perfil={address}/> : <p>Erro ao buscar usuário</p>
+                    //address ? <InforCard perfil={address}/> : <p>Erro ao buscar usuário</p>
 
-                    //address &&
-                    //<InforCard perfil={address}/>
+                    address &&
+                    <InforCard perfil={address}/>
                     }
+                    {erro && <h2>{erro}</h2>}
                 </div>
             </div>
 
